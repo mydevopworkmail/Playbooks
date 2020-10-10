@@ -6,7 +6,7 @@
    tasks:
    - yum:
       name: git
-      state: present
+      state: latest
    - shell: 'git --version'
      register: git_version
    - name: Display git version

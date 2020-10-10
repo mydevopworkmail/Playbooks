@@ -1,0 +1,14 @@
+---
+ - name: This is a playbook to install git
+   hosts: master
+   become: yes
+   gather_facts: false
+   tasks:
+   - yum:
+      name: git
+      state: present
+   - shell: 'git --version'
+     register: git_version
+   - name: Display git version
+     debug: 
+      var=git_version.stdout_lines

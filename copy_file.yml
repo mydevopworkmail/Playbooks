@@ -1,0 +1,9 @@
+---
+ - name: This is simple copy playbook
+   hosts: server1
+   become: yes
+   become_user: netcrk
+   gather_facts: false
+   tasks:
+   - name: copy file to server1
+     copy: src=/u01/ansible_main/test_copy.txt dest=/u02/practice

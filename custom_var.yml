@@ -1,0 +1,15 @@
+---
+ - name: Using of custom variable
+   hosts: server1
+   vars:
+    x: 23
+    my_name: sravan Kumar
+    my_age: 32.5
+    working: true
+   tasks:
+   - debug:
+      msg:
+       - "The value of x is {{x}} and type is {{x|type_debug}}"
+       - "The value of my_name is {{my_name}} is {{my_name|type_debug}}"
+       - "The value of my_age is {{my_age}} is {{my_age|type_debug}}"
+       - "The value of working is {{working}} is {{working|type_debug}}"

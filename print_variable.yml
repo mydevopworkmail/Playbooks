@@ -1,0 +1,10 @@
+---
+ - name: Practice on debug module
+   hosts: server1
+   #become: yes
+   #become_user: netcrk
+   tasks:
+   - name: Print of value in variable using debug module
+     debug:
+   #  msg: "The hostnmae is {{inventory_hostname}}"
+      var: invertory_hostname

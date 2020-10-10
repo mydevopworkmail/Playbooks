@@ -1,0 +1,7 @@
+---
+ - hosts: server1
+   become: yes
+#   become_user: netcrk
+   tasks:
+#   - file: path=/u02/practice/test1.txt state=touch
+   - yum: name=httpd state=absent

@@ -15,4 +15,4 @@
      'windows': 'mysql'
    tasks: 
    - debug: 
-      var=web_servers
+      var=fruits[3]

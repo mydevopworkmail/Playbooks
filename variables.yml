@@ -14,5 +14,6 @@
      'Linux': 'oracle'
      'windows': 'mysql'
    tasks: 
-   - debug: 
-      var=fruits[3]
+   - debug:
+      #var=fruits[3]
+      var=web_servers.keys()

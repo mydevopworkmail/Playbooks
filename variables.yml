@@ -1,0 +1,18 @@
+---
+ - hosts: server1
+   gather_facts: fasle
+   vars:
+    #x: 34
+    #fruits: ['apple','banana','orange','grape']
+    fruits:
+     - apple
+     - banana
+     - orange
+     - grape
+    #web_servers: {'Linux': 'oracle', 'windows': 'mysql'}
+    web_servers:
+     'Linux': 'oracle'
+     'windows': 'mysql'
+   tasks: 
+   - debug: 
+      var=web_servers

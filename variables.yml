@@ -16,4 +16,4 @@
    tasks: 
    - debug:
       #var=fruits[3]
-      var=web_servers.keys()
+      var=web_servers['Linux']

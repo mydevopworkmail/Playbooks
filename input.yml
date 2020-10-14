@@ -1,0 +1,10 @@
+---
+ - hosts: server1
+   vars_prompt:
+    name: user_name
+    prompt: Enter the value of username
+    private: no
+   gather_facts: no
+   tasks:
+    - debug:
+       msg: "The username is: {{user_name}}"

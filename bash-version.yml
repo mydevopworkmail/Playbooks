@@ -4,5 +4,7 @@
    tasks:
    - shell: "bash --version"
      register: bash_ver
+   - set_fact:                 #define a new variable
+      bash_version: "{{bash_ver.stdout.split('\n')[0].split()[3]}}"
    - debug: 
-      var=bash_ver.stdout.split("\n")[0].split()[3]
+      var=bash_version
